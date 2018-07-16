@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Operations Version="1.0" xmlns="http://schemas.microsoft.com/sqlserver/dac/Serialization/2012/02">
+  <Operation Name="Rename Refactor" Key="29250da8-34d8-41ca-ad29-d6aec5c5334e" ChangeDateTime="07/15/2018 18:25:55">
+    <Property Name="ElementName" Value="[dbo].[AdhockHistory].[Id]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[AdhockHistory]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="UniqueId" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="7e0c1a50-606a-479c-80f0-3344f7d3240c" ChangeDateTime="07/16/2018 12:33:05">
+    <Property Name="ElementName" Value="[dbo].[Clients].[ClientCode]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[Clients]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="UserName" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="0906f471-44be-4fdd-896e-05c487524bfe" ChangeDateTime="07/16/2018 12:33:27">
+    <Property Name="ElementName" Value="[dbo].[ClientsHistory].[ClientCode]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[ClientsHistory]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="UserName" />
+  </Operation>
+</Operations>

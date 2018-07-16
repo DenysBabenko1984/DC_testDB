@@ -1,0 +1,25 @@
+1. Install Node JS
+choco install nodejs.install 
+2. Intall required packages
+npm install express       
+-- Used for minimalist web framework for node
+npm install body-parser   
+-- Body parser incoming requests bodies in a middleware
+npm install mssql 
+-- Support of SQL Server database
+
+3. Run RestAPI server
+node index.js
+
+4. Open in browser
+localhost:4000
+
+4.1 Get Client with ClientId = 1
+localhost:4000/Clients/1   
+
+4.2 Insert Client
+localhost:4000/clients`
+{
+"ClientName":"ClientName1111",
+"UserName":"UserName_tested"
+}

@@ -1,0 +1,12 @@
+﻿CREATE TABLE [dbo].[AdhockHistory]
+(
+	[UniqueId] UNIQUEIDENTIFIER NOT NULL CONSTRAINT PK_AdhockHistory PRIMARY KEY
+	,AdhockName VARCHAR(100) NOT NULL
+	,RunnedDate	DATETIME NULL CONSTRAINT DF_AdhockHistory_RunnedDate DEFAULT(GETUTCDATE())
+	,RunnedBy	VARCHAR(100) NULL CONSTRAINT DF_AdhockHistory_RunnedBy DEFAULT(USER_NAME())
+	,RunnedFrom	VARCHAR(100) NULL CONSTRAINT DF_AdhockHistory_RunnedFrom DEFAULT(HOST_NAME())
+)
+GO
+
+CREATE NONCLUSTERED INDEX IX_AdhockHistory_AdhockName ON dbo.AdhockHistory(AdhockName)
+GO
