@@ -10,5 +10,11 @@ Post-Deployment Script Template
 --------------------------------------------------------------------------------------
 */
 
+--Insert static data 
 :r .\_StaticScripts\RequestStatus.sql
 :r .\_StaticScripts\AttributeTypes.sql
+
+
+
+-- Last step.  Apply security
+:r .\Security\ApplySecurityModel.sql

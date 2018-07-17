@@ -3,7 +3,7 @@
 	AccountId		INT IDENTITY(1,1) NOT NULL CONSTRAINT PK_Accounts PRIMARY KEY
 	,AccountCode	VARCHAR(20)	NOT NULL	CONSTRAINT UQ_Accounts_AccountCode UNIQUE
 	,ClientId		INT	NOT NULL		CONSTRAINT FK_AccountId_ClientId	FOREIGN KEY REFERENCES dbo.Clients(ClientId)
-	,Amount			NUMERIC(18,2)	NOT NULL DEFAULT(0.0)
+	,Amount			utMoney	NOT NULL DEFAULT(0.0)
 	,VersionId		ROWVERSION
 )
 GO

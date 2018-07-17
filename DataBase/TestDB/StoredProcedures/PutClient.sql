@@ -30,7 +30,7 @@ SET TRAN ISOLATION LEVEL REPEATABLE READ
 			VALUES(ClientName,UserName)
 		;
 
-		SET @ClientId = ISNULL(@ClientId, @@IDENTITY)
+		SET @ClientId = ISNULL(@ClientId, SCOPE_IDENTITY())
 
         IF @TranCounter = 0  
             COMMIT TRANSACTION;  

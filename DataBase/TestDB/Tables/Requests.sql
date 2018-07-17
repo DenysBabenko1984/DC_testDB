@@ -2,9 +2,12 @@
 (
 	RequestId INT IDENTITY(1,1) NOT NULL CONSTRAINT PK_Requests PRIMARY KEY
 	,RequestStatusId INT NOT NULL CONSTRAINT FK_Requests_StatusId FOREIGN KEY REFERENCES dbo.[RequestStatus](RequestStatusId)
+	,RequestStatusComment VARCHAR(4000) NULL
 	,RequestDate DATE NOT NULL
+	,Amount			utMoney	NOT NULL	
 	,Comment VARCHAR(4000) NULL
 	,ClientId INT NOT NULL CONSTRAINT FK_Request_ClientId FOREIGN KEY REFERENCES dbo.Clients(ClientId)
+	,AccountId	INT NOT NULL CONSTRAINT FK_Request_AccountId FOREIGN KEY REFERENCES dbo.Accounts(AccountId)
 	,VersionId		ROWVERSION 
 )
 GO
@@ -22,6 +25,9 @@ SET NOCOUNT ON
 	    RequestDate,
 	    Comment,
 	    ClientId,
+		Amount,
+		RequestStatusComment,
+		AccountId,
 	    ActionDate,
 	    ActionFlag,
 	    ActionUser
@@ -32,6 +38,9 @@ SET NOCOUNT ON
 	    RequestDate,
 	    Comment,
 	    ClientId,
+		Amount,
+		RequestStatusComment,
+		AccountId,
         GETUTCDATE(),
 		'U',
 		SUSER_SNAME()
@@ -48,6 +57,9 @@ SET NOCOUNT ON
 	    RequestDate,
 	    Comment,
 	    ClientId,
+		Amount,
+		RequestStatusComment,
+		AccountId,
 	    ActionDate,
 	    ActionFlag,
 	    ActionUser
@@ -58,6 +70,9 @@ SET NOCOUNT ON
 	    RequestDate,
 	    Comment,
 	    ClientId,
+		Amount,
+		RequestStatusComment,
+		AccountId,
 		GETUTCDATE(),
 		'I',
 		SUSER_SNAME()
@@ -74,6 +89,9 @@ SET NOCOUNT ON
 	    RequestDate,
 	    Comment,
 	    ClientId,
+		Amount,
+		RequestStatusComment,
+		AccountId,
 	    ActionDate,
 	    ActionFlag,
 	    ActionUser
@@ -84,6 +102,9 @@ SET NOCOUNT ON
 	    RequestDate,
 	    Comment,
 	    ClientId,
+		Amount,
+		RequestStatusComment,
+		AccountId,
 		GETUTCDATE(),
 		'D',
 		SUSER_SNAME()

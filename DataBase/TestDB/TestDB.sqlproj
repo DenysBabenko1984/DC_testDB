@@ -64,6 +64,7 @@
     <Folder Include="DatabaseTriggers" />
     <Folder Include="Types" />
     <Folder Include="Security" />
+    <Folder Include="UserTypes" />
   </ItemGroup>
   <ItemGroup>
     <Build Include="Tables\DDLLog.sql" />
@@ -84,11 +85,23 @@
     <Build Include="StoredProcedures\PutClient.sql" />
     <Build Include="StoredProcedures\GetClient.sql" />
     <Build Include="StoredProcedures\SearchClients.sql" />
+    <Build Include="StoredProcedures\PutAccount.sql" />
+    <Build Include="StoredProcedures\GetAccount.sql" />
+    <Build Include="StoredProcedures\SearchAccount.sql" />
+    <Build Include="Security\rRequester.sql" />
+    <Build Include="Security\rApprover.sql" />
+    <Build Include="StoredProcedures\PutRequest.sql" />
+    <Build Include="StoredProcedures\GetRequest.sql" />
+    <Build Include="StoredProcedures\SearchRequest.sql" />
+    <Build Include="StoredProcedures\SetRequestStatus.sql" />
+    <Build Include="UserTypes\utMoney.sql" />
+    <Build Include="StoredProcedures\SearchRequestForApproval.sql" />
   </ItemGroup>
   <ItemGroup>
     <None Include="TestDB.publish.xml" />
     <None Include="_StaticScripts\RequestStatus.sql" />
     <None Include="_StaticScripts\AttributeTypes.sql" />
+    <None Include="Security\ApplySecurityModel.sql" />
   </ItemGroup>
   <ItemGroup>
     <PostDeploy Include="Script.PostDeployment.sql" />

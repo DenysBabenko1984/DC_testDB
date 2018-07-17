@@ -6,6 +6,7 @@
 	-- Transaction could be inserted without request.  For example rollback transaction 
 	,Comment	VARCHAR(4000) NULL
 	,AccountId	INT	NOT NULL	CONSTRAINT FK_Transactions_AccountId	FOREIGN KEY REFERENCES dbo.Accounts(AccountId)
+	,Amount			utMoney	NOT NULL
 	-- Half-transaction accounting model is used for simplification. 
 	,CreatedBy	VARCHAR(100)	NOT NULL
 	,CreatedDate	DATETIME	NOT NULL DEFAULT(GETUTCDATE())
